@@ -54,10 +54,21 @@
     var myRevenueMessage=document.getElementById("revenue");
 
     function makeCoffee() {
-        myImage.setAttribute('src','static/coffee_mug.jpg');
+        myImage.setAttribute('src','static/coffee_machine.jpg');
+        setTimeout(showCoffeeMug, 1000);
+        setTimeout(showCoffeeBeans, 2500)
+    };
+
+    function showCoffeeBeans() {
+        myImage.setAttribute('src', 'static/coffee_beans.jpg');
+    };
+
+    function showCoffeeMug() {
+        myImage.setAttribute('src', 'static/coffee_mug.jpg');
     };
 
     myImage.addEventListener('click', makeCoffee);
+
     // use this dictionary in further study step
 
     var prices = {
